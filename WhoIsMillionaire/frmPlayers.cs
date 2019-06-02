@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -36,8 +37,14 @@ namespace WhoIsMillionaire
 
         }
 
+
+        SoundPlayer backgroundsound = new SoundPlayer(@".\Audio\xxx.wav");
+
         private void FrmPlayers_Load(object sender, EventArgs e)
         {
+ 
+            backgroundsound.PlayLooping();
+
             timer1.Enabled = true;
             cpbTime.Text = seconds.ToString();
             cpbTime.Value = seconds;
@@ -58,6 +65,24 @@ namespace WhoIsMillionaire
             cpbTime.Value = seconds;
             cpbTime.Text = seconds.ToString();
             seconds--;
+        }
+
+        int Sound = 0;
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            Sound++;
+            if (Sound % 2 != 0)
+            {
+               pbSound.BackgroundImage = Image.FromFile( @".\Images\mute.png");
+               backgroundsound.Stop();
+
+            }
+            else
+            {
+                pbSound.BackgroundImage = Image.FromFile( @".\Images\unmute.png");
+                backgroundsound.PlayLooping();
+            }
         }
     }
 }

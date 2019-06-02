@@ -27,10 +27,12 @@ namespace WhoIsMillionaire
 
         private void PbPlay_Click(object sender, EventArgs e)
         {
+
+            player.Stop();
             pbPlay.BorderStyle = BorderStyle.Fixed3D;
 
             OpenfrmPlayer();
-
+           
 
         }
 
@@ -44,11 +46,11 @@ namespace WhoIsMillionaire
         {
             pbPlay.BorderStyle = BorderStyle.None;
         }
+        SoundPlayer player = new SoundPlayer(@Application.StartupPath + @"\Audio\intro.wav");
 
+      
         private void WelcomePL_Load(object sender, EventArgs e)
         {
-            SoundPlayer player = new SoundPlayer(@Application.StartupPath + @"\Audio\intro.wav");
-
             player.Play();
         }
     }

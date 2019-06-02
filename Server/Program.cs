@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WhoIsMillionaire
+namespace Server
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace WhoIsMillionaire
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AfterConnect());
+            Application.Run(new Form1());
         }
     }
 }

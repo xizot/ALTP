@@ -53,13 +53,17 @@
             this.label16 = new System.Windows.Forms.Label();
             this.cpbTime = new CircularProgressBar.CircularProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pbSound = new System.Windows.Forms.PictureBox();
+            this.circularButton1 = new WhoIsMillionaire.CircularButton();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSound)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Controls.Add(this.circularButton1);
             this.groupBox1.Controls.Add(this.Muc15);
             this.groupBox1.Controls.Add(this.Muc14);
             this.groupBox1.Controls.Add(this.Muc13);
@@ -312,7 +316,7 @@
             this.cpbTime.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cpbTime.InnerMargin = 2;
             this.cpbTime.InnerWidth = -1;
-            this.cpbTime.Location = new System.Drawing.Point(28, 144);
+            this.cpbTime.Location = new System.Drawing.Point(28, 202);
             this.cpbTime.MarqueeAnimationSpeed = 2000;
             this.cpbTime.Maximum = 60;
             this.cpbTime.Name = "cpbTime";
@@ -340,6 +344,29 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // pbSound
+            // 
+            this.pbSound.BackColor = System.Drawing.Color.Transparent;
+            this.pbSound.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbSound.BackgroundImage")));
+            this.pbSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbSound.Location = new System.Drawing.Point(12, 12);
+            this.pbSound.Name = "pbSound";
+            this.pbSound.Size = new System.Drawing.Size(35, 34);
+            this.pbSound.TabIndex = 7;
+            this.pbSound.TabStop = false;
+            this.pbSound.Click += new System.EventHandler(this.PictureBox1_Click);
+            // 
+            // circularButton1
+            // 
+            this.circularButton1.BackColor = System.Drawing.Color.White;
+            this.circularButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("circularButton1.BackgroundImage")));
+            this.circularButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.circularButton1.Location = new System.Drawing.Point(129, 16);
+            this.circularButton1.Name = "circularButton1";
+            this.circularButton1.Size = new System.Drawing.Size(34, 33);
+            this.circularButton1.TabIndex = 7;
+            this.circularButton1.UseVisualStyleBackColor = false;
+            // 
             // frmPlayers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,6 +375,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(837, 438);
+            this.Controls.Add(this.pbSound);
             this.Controls.Add(this.cpbTime);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.btnD);
@@ -363,6 +391,7 @@
             this.Text = "frmPlayers";
             this.Load += new System.EventHandler(this.FrmPlayers_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbSound)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -392,5 +421,7 @@
         private System.Windows.Forms.Label label16;
         private CircularProgressBar.CircularProgressBar cpbTime;
         private System.Windows.Forms.Timer timer1;
+        private CircularButton circularButton1;
+        private System.Windows.Forms.PictureBox pbSound;
     }
 }
